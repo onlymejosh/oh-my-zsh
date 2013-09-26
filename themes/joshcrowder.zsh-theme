@@ -1,4 +1,4 @@
-PROMPT='%3~$(git_prompt_info)$(git_time_since_commit)%# '
+PROMPT='%3~$(git_prompt_info)%# '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="["
 ZSH_THEME_GIT_PROMPT_SUFFIX="]"
@@ -17,6 +17,9 @@ git_custom_status() {
     echo "$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_PREFIX$(current_branch)$ZSH_THEME_GIT_PROMPT_SUFFIX"
   fi
 }
+
+alias g=git
+alias r=rails
 
 # Determine the time since last commit. If branch is clean,
 # use a neutral color, otherwise colors will vary according to time.
